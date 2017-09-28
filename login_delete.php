@@ -19,7 +19,7 @@
 
 		<div class="container">
 			<div class="col-md-6">
-				<form action="login_create.php" method="post">
+				<form action="login_delete.php" method="post">
 					<div class="form-group">
 						<label for="username">Username</label>
 						<input type="text" name="username" class="form-control">
@@ -31,17 +31,14 @@
 					<div class="form-group">
 						<select name="id" class="form-control">
 							<?php
-								while($row=mysqli_fetch_assoc($result))
-								{
-									$id = $row['id'];
-									echo "<option value='$id'>$id</option>";
-								}
+							showAllUserId();
 							?>
 						</select>
 					</div>
-					<input type="submit" name="submit" value="Submit" class="btn btn-primary" />
+					<input type="submit" name="submit" value="Delete" class="btn btn-primary" />
 				</form>
 			</div>
 		</div>
-	</body>
+	
+</body>
 </html>
